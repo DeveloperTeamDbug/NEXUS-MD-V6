@@ -3,7 +3,7 @@
   "version": "6.0.0",
   "type": "commonjs",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name Nexus-md",
+    "start": "node index.js",
     "stop": "pm2 stop Nexus-md",
     "restart": "git pull && npm stop && npm start",
     "stash": "git stash && git stash drop"
@@ -12,7 +12,7 @@
     "@adiwajshing/keyed-db": "latest",
     "@ffmpeg-installer/ffmpeg": "latest",
     "@google-cloud/translate": "latest",
-    "@whiskeysockets/baileys": "6.7.0",
+    "@whiskeysockets/baileys": "github:AmilaPrabathKumara/Baileys-Latest#fix-leak-upload",
     "figlet": "^1.7.0",
     "adm-zip": "latest",
     "axios": "^1.15.0",
@@ -68,5 +68,8 @@
   },
   "overrides": {
     "css-select": "4.1.0"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
